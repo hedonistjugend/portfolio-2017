@@ -33,18 +33,21 @@ body {
 
 
 h1 {
+  font-family: "SourceSansProRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   font-size: 56px;
   color: #111;
 }
 
 h2 {
+  font-family: "SourceSansProRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     font-size: 35px;
     color: #111;
 }
 
 h6 {
+  font-family: "SourceSansProRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   letter-spacing: 2px;
   text-align: center;

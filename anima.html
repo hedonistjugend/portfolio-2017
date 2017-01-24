@@ -1,0 +1,71 @@
+<html style= "height: 100%;">
+<style type="text/css">
+
+.cursor {
+  position: absolute;
+  animation-name: cursor;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+}
+
+.menu1 {
+  position:absolute;
+  top: 145px;
+  left: 212px;
+  animation-name: menu1;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+.card {
+  position:absolute;
+  top: -5px;
+  left: 73px;
+  animation-name: card;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+  @keyframes menu1 {
+    0%   {opacity: 0;}
+    45%   {opacity: 0;}
+    50%, 70%  {opacity: 1;}
+    80%, 100% {opacity: 0;}
+  }
+
+  @keyframes card {
+    0%, 70%   {opacity: 0;}
+    75%, 90%  {opacity: 1;}
+    95%, 100% {opacity: 0;}
+  }
+
+ @keyframes cursor {
+  0%, 10%   {left: 0px;   top: 0px;}
+  20%, 30%  {left: 125px; top: 158px;}
+  40%, 50%  {left: 235px; top: 158px;} /* Выделил */
+  40%  {height: 30%;}
+  45%, 55%  {height: 40%;}
+  55%, 65%  {height: 30%;}
+  60%, 70%  {left: 320px; top: 232px;} /* Перешёл к правому меню */
+  80%, 85%  {left: 252px; top: 134px;} /* Перешёл к карте*/
+  95%, 100% {left: 0px;   top: 0px;}
+}
+
+</style>
+
+<body style= "height: 100%; display: flex; justify-content: center; align-items: center;">
+
+  <illustration style="flex-shrink: 1; position:relative;">
+    <img src="pc.svg" alt="Pesonal Computer"
+    <illustration-kids>
+
+      <img class="card" src="card.svg" alt="Zabl Card" >
+      <img class="menu1" src="menu.svg" alt="Right Click Menu" >
+      <img class="cursor" src="cursor.svg" alt="Mouse Cursor" >
+    </illustration-kids>
+  </illustration>
+
+</body>
+</html>

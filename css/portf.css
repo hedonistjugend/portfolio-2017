@@ -9,11 +9,11 @@
 }
 /* font-family: "SourceSansProLight"; */
 @font-face {
-    font-family: "SourceSansProLight";
-    src: url("../fonts/SourceSansProLight/SourceSansProLight.eot");
-    src: url("../fonts/SourceSansProLight/SourceSansProLight.eot?#iefix")format("embedded-opentype"),
-    url("../fonts/SourceSansProLight/SourceSansProLight.woff") format("woff"),
-    url("../fonts/SourceSansProLight/SourceSansProLight.ttf") format("truetype");
+    font-family: "SourceSansProBold";
+    src: url("../fonts/SourceSansProBold/SourceSansProBold.eot");
+    src: url("../fonts/SourceSansProBold/SourceSansProBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SourceSansProBold/SourceSansProBold.woff") format("woff"),
+    url("../fonts/SourceSansProBold/SourceSansProBold.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
@@ -22,8 +22,8 @@ body {
   font-family: "SourceSansProRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   /*background-image: -webkit-linear-gradient(#6400EE 0%, rgba(124,225,219,0.00) 300px);
   background-repeat: no-repeat;*/
-  font-size: 22px;
-  line-height: 35px;
+  font-size: 20px;
+  line-height: 32px;
 
 }
 
@@ -41,28 +41,48 @@ h1 {
 
 h2 {
   font-family: "SourceSansProRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
+    /*text-align: center;*/
     font-size: 35px;
     color: #111;
+    padding: 20px 0;
+}
+
+h3 {
+  font-family: "SourceSansProBold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #111;
+    margin-bottom: 1em;
 }
 
 h6 {
   font-family: "SourceSansProRegular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
-  letter-spacing: 2px;
   text-align: center;
-  text-transform: uppercase;
-
 }
 
 p {
-  font-size: 22px;
-  line-height: 35px;
+  font-size: 20px;
+  line-height: 32px;
 }
-
+/*
 a {
   color: #1BB3D7;
+}*/
+
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #6C40FE;
+
+    transition: all 0.2s;
 }
+
+a:hover {
+
+  color: #6C40FE;
+  text-decoration: none;
+}
+
 
 article {
   padding-top: 25px;

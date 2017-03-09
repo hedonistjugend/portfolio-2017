@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Костя Дмитриев. Человек и пароход. И дизайнер.</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/portf.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+
+            <h1>Материальный дизайн и Аггрегион</h1>
+
+            <article class="col-md-8 col-md-offset-2">
+                <p>Когда я присоединился к Аггрегиону, приложение уже работало, оно было сделано разработчиками. Ещё до моего прихода был выбран материальный дизайн на основе ангуляра. Это по сути было простым решением — потому что бутстрап надоел, и разработчики
+                    подумали, что это будет здорово. Я раньше не сталкивался с энтерпрайз системами, да и чего уж, не мобтльными материальными приложениями. И имел некоторые сомнения по этому поводу. В общем, первая версия приложения была сделана разработчиками.
+                    ПМ и бизнес, хотели его немножко украсить. Я хотел украсить-улучшить мелочами.
+                </p>
+            </article>
+
+            <screenshot>
+                <img src="images/overall_old_aggregion.jpg" class="img-responsive" alt="Aggregion system before i joined">
+                <h6>Так всё это выглядело</h6>
+            </screenshot>
+
+            <article class="col-md-8 col-md-offset-2">
+                <h3>Плавающие лейблы</h3>
+                <p>Пока я не сталкивался с плавающими лейблами, мне казалось это хорошей идеей. Не надо придумывать плейсхолдеры, а лейблы всегда нужны. Но обнаружилась неприятная, режущая глаз мелочь. Отступы сильно варьировались в зависимости от заполненности/незаполненности.
+                    Т.к. я хотел добавить воздуха, чтобы формы не слипались, в незаполненных местах создавались большие пропасти. Так стандартный отступ между элементами был —30px, но без лейбла он увеличивался до 50px.
+                </p>
+            </article>
+
+            <screenshot>
+                <img src="images/overall_floating_labels.png" class="img-responsive" alt="Floating labels">
+                <h6>Слева незполненные, справа заполненные поля. Некоторые блоки слипаются визуально, но по смыслу они не имеют ничего общего.</h6>
+            </screenshot>
+
+
+            <article class="col-md-8 col-md-offset-2">
+                <h3>FAB-кнопки</h3>
+                <p>Мой подход к проектированию — у экрана всегда должна быть главная цель, которую следует выполнить. В материальном дизайне эта идея тоже присутствует и она реализована фаб-кнопкой. Кнопка большая, и рядом с большим пальцем. Минус — она
+                    неподписана. Неподписанная иконка (кроме пары действий, к которым все более менее привыкли типа сохранения, редактирования и удаления) вызывает страх, и люди на неё стараются не нажимать и даже не наводить.</p>
+                <p>
+                    Поэтому нам круглая кнопка не подходила, т.к. кроме сохранения у нас обычно были ещё и параллельные процессы — как то переход к следующей стадии формы. Соответственно фаб-кнопка трансформировалась у нас в ФАБ-панель с главным действием(кнопкой) и второстепенными
+                    (мат-ссылками). В моём представлении фаб-панель всегда должна быть видна, приклееной снизу, но мы это пока не реализовали.
+                </p>
+            </article>
+
+            <screenshot>
+                <img src="images/overall_fab_buttons.png" class="img-responsive" alt="Fab Buttons">
+                <h6>В данном случае определить значение кнопки слева возможно, но когда кнопка делает более сложную вещь фабы уже не подходят. </h6>
+            </screenshot>
+
+        </div>
+    </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

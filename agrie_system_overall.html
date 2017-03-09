@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Костя Дмитриев. Человек и пароход. И дизайнер.</title>
+    <title>Kostya Dmitriev makes The Design Great Again!</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -27,52 +27,63 @@
     <div class="container">
         <div class="row">
 
-            <h1>Материальный дизайн и Аггрегион</h1>
+            <h1>Aggregion & Material Design</h1>
 
             <article class="col-md-8 col-md-offset-2">
-                <p>Когда я присоединился к Аггрегиону, приложение уже работало, оно было сделано разработчиками. Ещё до моего прихода был выбран материальный дизайн на основе ангуляра. Это по сути было простым решением — потому что бутстрап надоел, и разработчики
-                    подумали, что это будет здорово. Я раньше не сталкивался с энтерпрайз системами, да и чего уж, не мобтльными материальными приложениями. И имел некоторые сомнения по этому поводу. В общем, первая версия приложения была сделана разработчиками.
-                    ПМ и бизнес, хотели его немножко украсить. Я хотел украсить-улучшить мелочами.
+                <p>When I joined Aggregion application was already working. The design was applied by the dev team and looked a bit rough.
+                    The team has already made a solution to use Material Design framework based on Angular.
+                    Bootstrap's default theme was already to boring, so devs thought, that material will work quite fine.
+                    Before joining the Agreggion I haven't heard about any enterprise systems that use Material.
+                    Truth be told even Google doesn't use Material in all of it's apps except on phones & tablets.
+                    So I had some doubts about it. Here I tell how we overcome some moments and finally got what we have now.
                 </p>
             </article>
 
             <screenshot>
-                <img src="images/overall_old_aggregion.jpg" class="img-responsive" alt="Aggregion system before i joined">
-                <h6>Так всё это выглядело</h6>
+                <img src="images/overall_new_aggregion.png" class="img-responsive" alt="Aggregion system before i joined">
+                <h6>Here's how our app looks now.</h6>
             </screenshot>
 
             <article class="col-md-8 col-md-offset-2">
-                <h3>Плавающие лейблы</h3>
-                <p>Пока я не сталкивался с плавающими лейблами, мне казалось это хорошей идеей. Не надо придумывать плейсхолдеры, а лейблы всегда нужны.
-                    Но обнаружилась неприятная, режущая глаз мелочь. Отступы сильно варьировались в зависимости от заполненности/незаполненности.
-                    Т.к. я хотел добавить воздуха, чтобы формы не слипались, в незаполненных местах создавались большие пропасти.
-                    Так стандартный отступ между элементами был —30px, но без лейбла он увеличивался до 50px.
+                <h3>Floating Labels</h3>
+                <p>
+                    Before I used floating labels I always thought it is a nice idea.
+                    You don't have to think about placeholders' text because labels are already placeholders.
+                    And then they don't disappear which is a very common ux flaw. But there is a twist with floating labels.
+                    Paddings for filled fields and empty fields are different, and some fields are quite often empty.
+                    So you have to find the golden standart of padding,
+                    so the field don't appear to close or to far way and keep nice vertical rhythm.
                 </p>
             </article>
 
             <screenshot>
                 <img src="images/overall_floating_labels.png" class="img-responsive" alt="Floating labels">
-                <h6>Слева незполненные, справа заполненные поля. Некоторые блоки слипаются визуально, но по смыслу они не имеют ничего общего.</h6>
+                <h6>On the left empty state, on the right some filled & some empty</h6>
             </screenshot>
 
 
             <article class="col-md-8 col-md-offset-2">
-                <h3>FAB-кнопки</h3>
-                <p>Мой подход к проектированию — у экрана всегда должна быть главная цель, которую следует выполнить.
-                    В материальном дизайне эта идея тоже присутствует и она реализована фаб-кнопкой.
-                    Кнопка большая, и рядом с большим пальцем. Минус — она неподписана.
-                    Неподписанная иконка (кроме пары действий, к которым все более менее привыкли типа сохранения, редактирования и удаления)
-                    вызывает страх, и люди на неё стараются не нажимать и даже не наводить.</p>
+                <h3>FAB-buttons</h3>
                 <p>
-                    Поэтому нам круглая кнопка не подходила, т.к. кроме сохранения у нас обычно были ещё и параллельные процессы — как то переход к следующей стадии формы.
-                    Соответственно фаб-кнопка трансформировалась у нас в ФАБ-панель с главным действием(кнопкой) и второстепенными (мат-ссылками).
-                    В моём представлении фаб-панель всегда должна быть видна, приклееной снизу, но мы это пока не реализовали.
+                    My general idea when the designing apps is quite simple – screen (big or small) should have main goal.
+                    The task we want to complete. Material design also has this idea and uses FAB-button.
+                    The button is big, floats with the screen and is close to the thumb (on phones).
+                    But it has a serious flaw. It has no text and icon without text (Nielsen approves)
+                    is a first step in direction of user frustration.
+                    Users generally tend to avoid unknown, so they don't push the button. But it is the main button of the screen.
+                <p>
+                    You can disagree that users still know some icons for example Save & Add.
+                    But what if we have some Save & Confirm or Save & Add Files. So we needed text on the button.
+                    But what comes next will shock you – in enterprise apps there are usually alternate user flows that
+                    also need actions but no so prominent.
+                    So we came with idea of FAB-panels consisting of main button and some alternate buttons that look not so shiny.
+                    Let's place it on bottom of the screen and make always visible.
                 </p>
             </article>
 
             <screenshot>
                 <img src="images/overall_fab_buttons.png" class="img-responsive" alt="Fab Buttons">
-                <h6>В данном случае определить значение кнопки слева возможно, но когда кнопка делает более сложную вещь фабы уже не подходят. </h6>
+                <h6>Evolution of FAB</h6>
             </screenshot>
 
         </div>
